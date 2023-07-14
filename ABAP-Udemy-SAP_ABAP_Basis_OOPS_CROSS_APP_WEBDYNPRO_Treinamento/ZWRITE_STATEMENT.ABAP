@@ -1,1 +1,22 @@
+REPORT ZWRITE_STATEMENT.
 
+
+
+********************************** WRITE STATEMENT AND COLOR **********************************************
+
+WRITE: 'HELLO USER', / 'HELLO DILBAG SINGH', / 'BY DILBAG SINGH'.
+SKIP 2.
+WRITE: 'HELLO USER' COLOR 2, / 'HELLO DILBAG SINGH' COLOR 3, / 'BY DILBAG SINGH'COLOR 6.
+SKIP 2.
+FORMAT COLOR 7.
+WRITE: 3(10) 'HELLO USER', /5 'HELLO DILBAG SINGH', /7 'BY DILBAG SINGH'.
+FORMAT COLOR OFF.
+SKIP.
+
+********************************** SYSTEM FIELDS **********************************************************
+
+WRITE: / 'CURRENT SERVER DATE IS', SY-DATUM.
+
+WRITE: / 'CURRENT SERVER TIME IS', SY-UZEIT.
+
+WRITE: / 'CURRENT SERVER NAME IS', SY-UNAME .
