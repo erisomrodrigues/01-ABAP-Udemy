@@ -17,10 +17,16 @@ CLASS lcl_loucutor DEFINITION.
 
 ENDCLASS.
 
-DATA:
-    O_LOUCUTOR TYPE REF TO lcl_loucutor.
+START-OF-SELECTION.
 
-CREATE OBJECT o_loucutoR.
+" USANDO ABAP MODERNO COM INSTRUÇÕES INLINE
+DATA(O_LOUCUTOR) = NEW lcl_loucutor( ).
+
+
+*DATA:
+*    O_LOUCUTOR TYPE REF TO lcl_loucutor.
+*
+*CREATE OBJECT o_loucutoR.
     WRITE:/ o_loucutor->nome.
 
 if O_LOUCUTOR IS NOT BOUND.
